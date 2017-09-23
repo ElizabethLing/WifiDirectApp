@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WifiDirectTest" />
+
+    <Button
+        android:id="@+id/bt_discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="discover device"
+        android:layout_below="@+id/tv_main"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/bt_stopdiscover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_discover"
+        android:text=" stop discover " />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_sendpicture"
+        android:text="  send picture   "
+        android:layout_above="@+id/bt_stopdiscover"
+        android:layout_toRightOf="@+id/bt_discover"
+        android:layout_toEndOf="@+id/bt_discover" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="be group owner"
+        android:id="@+id/bt_bgowner"
+        android:layout_below="@+id/bt_stopdiscover"
+        android:layout_toRightOf="@+id/bt_stopconnect"
+        android:layout_alignRight="@+id/bt_senddata"
+        android:layout_alignEnd="@+id/bt_senddata" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_senddata"
+        android:text="   send data    "
+        android:layout_below="@+id/bt_sendpicture"
+        android:layout_alignRight="@+id/bt_sendpicture"
+        android:layout_alignEnd="@+id/bt_sendpicture" />
+
+    <Button
+        android:id="@+id/bt_stopconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_stopdiscover"
+        android:text=" stop connect "/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_stopconnect"/>
+</RelativeLayout>
